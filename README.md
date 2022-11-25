@@ -1,3 +1,15 @@
+# React Todo-v2
+
+This is an Updated version of the React Todo-p1 project which I have created before.
+
+Using the class components. In this Version I have added the functional component and useState hook for state updates.
+
+# Tech stack
+
+- ReactJS
+- HTML
+- CSS
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
