@@ -19,7 +19,6 @@ const App = () => {
     setTodos(newTodos);
   };
 
-  console.log(todos);
   return (
     <React.Fragment>
       <TodoForm onAddTodo={addTodos} />
