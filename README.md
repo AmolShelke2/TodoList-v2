@@ -10,6 +10,10 @@ Using the class components. In this Version I have added the functional componen
 - HTML
 - CSS
 
+## Live Preview
+
+## Preview
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
