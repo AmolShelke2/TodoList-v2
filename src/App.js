@@ -4,12 +4,7 @@ import TodoForm from './components/todoForm';
 import TodoLists from './components/todoLists/TodoLists';
 
 const App = () => {
-  const [todos, setTodos] = useState([
-    {
-      task: 'Wake up',
-      id: 't1',
-    },
-  ]);
+  const [todos, setTodos] = useState([]);
 
   const addTodos = enteredTodo => {
     let newTodos = [...todos];
