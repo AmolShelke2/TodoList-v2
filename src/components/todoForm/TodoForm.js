@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
-export const TodoForm = () => {
+import './TodoForm.css';
+
+export const TodoForm = props => {
   const [enteredTodo, setEnteredTodo] = useState('');
 
   const enterdTodoChangeHandler = e => {
@@ -16,11 +18,7 @@ export const TodoForm = () => {
       return;
     }
 
-    const todoToBeAdded = {
-      task: enteredTodo,
-      id: Math.random().toString(),
-    };
-    console.log(todoToBeAdded);
+    props.onAddTodo(enteredTodo);
 
     setEnteredTodo('');
   };
@@ -33,6 +31,7 @@ export const TodoForm = () => {
           type="text"
           onChange={enterdTodoChangeHandler}
           value={enteredTodo}
+          placeholder="Enter Your Todo Task"
         />
         <button type="submit">Add Todo</button>
       </form>

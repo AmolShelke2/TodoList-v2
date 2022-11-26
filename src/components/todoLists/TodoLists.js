@@ -6,7 +6,9 @@ import { TodoItem } from './TodoItem';
 const TodoLists = props => {
   return (
     <div className="todo-lists">
-      <TodoItem id={Math.random().toString()} task={'Wake up'} />
+      {props.items.map(item => (
+        <TodoItem task={item.task} key={item.id} />
+      ))}
     </div>
   );
 };
