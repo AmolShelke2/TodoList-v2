@@ -1,0 +1,16 @@
+.todo-item {
+        display: flex;
+        align-items: center;
+        text-align: center;
+}
+
+.removeBtn {
+        border: 1px solid #ccc;
+        height: 1rem;
+        width: 1rem;
+        text-align: center;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}

@@ -1,14 +1,15 @@
 import React from 'react';
 
-import './App.css';
 import TodoForm from './components/todoForm';
+import TodoLists from './components/todoLists/TodoLists';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <React.Fragment>
       <TodoForm />
-    </div>
+      <TodoLists />
+    </React.Fragment>
   );
-}
+};
 
 export default App;

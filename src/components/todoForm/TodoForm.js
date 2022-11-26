@@ -17,7 +17,7 @@ export const TodoForm = () => {
     }
 
     const todoToBeAdded = {
-      todoItem: enteredTodo,
+      task: enteredTodo,
       id: Math.random().toString(),
     };
     console.log(todoToBeAdded);
