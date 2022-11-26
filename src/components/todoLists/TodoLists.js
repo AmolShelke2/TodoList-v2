@@ -1,15 +1,17 @@
 import React from 'react';
 
 import './TodoLists.css';
-import { TodoItem } from './TodoItem';
 
 const TodoLists = props => {
   return (
-    <div className="todo-lists">
+    <ul className="todo-lists">
       {props.items.map(item => (
-        <TodoItem task={item.task} key={item.id} />
+        <li key={item.id}>
+          {item.task}
+          <button onClick={() => props.onDeleteTodoItem(item)}>x</button>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };
 

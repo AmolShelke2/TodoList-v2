@@ -12,17 +12,23 @@ const App = () => {
   ]);
 
   const addTodos = enteredTodo => {
-    setTodos(prevTodos => {
-      const updatedTodos = [...prevTodos];
-      updatedTodos.unshift({ task: enteredTodo, id: Math.random().toString() });
-      return updatedTodos;
-    });
+    let newTodos = [...todos];
+    console.log(newTodos);
+    newTodos.push({ task: enteredTodo, id: Math.random().toString() });
+    setTodos(newTodos);
   };
 
+  const deleteTodoItem = index => {
+    let newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
+
+  console.log(todos);
   return (
     <React.Fragment>
       <TodoForm onAddTodo={addTodos} />
-      <TodoLists items={todos} />
+      <TodoLists items={todos} onDeleteTodoItem={deleteTodoItem} />
     </React.Fragment>
   );
 };
