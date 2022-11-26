@@ -11,8 +11,11 @@ Using the class components. In this Version I have added the functional componen
 - CSS
 
 ## Live Preview
+[React-Todo-list-v2](https://todo-list-v2-nine.vercel.app/)
 
 ## Preview
+![todo-list-v2-nine vercel app_](https://user-images.githubusercontent.com/95171638/204099777-15bc39ca-6eaf-4c04-b8a4-f9b64f7fb072.png)
+
 
 # Getting Started with Create React App
 
