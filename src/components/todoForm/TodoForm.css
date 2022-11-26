@@ -1,3 +1,29 @@
+.todo-form {
+        height: 13rem;
+        width: 27rem;
+        background-color: #ccc;
+        margin-top: 1rem;
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, .7);
+}
+
+.error {
+        font-size: 1.5rem;
+        transition: .3s all ease-in-out;
+        background-color: #ccc;
+        width: 14rem;
+        border-radius: 8px;
+        text-align: center;
+        color: red;
+        font-weight: bold;
+        display: none;
+}
+
+.error.active {
+        display: block;
+}
+
 .todo-form form {
         display: flex;
         flex-direction: column;
@@ -7,7 +33,7 @@
 .todo-form label {
         margin-top: 1rem;
         margin-bottom: .5rem;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: bold;
 }
 
@@ -30,4 +56,15 @@
         border-radius: 8px;
         cursor: pointer;
         box-shadow: 1px 2px 5px rgba(0, 0, 0, .7);
+}
+
+
+@media (max-width: 500px) {
+        .todo-form {
+                width: 20rem;
+        }
+
+        .todo-form input {
+                width: 15rem;
+        }
 }

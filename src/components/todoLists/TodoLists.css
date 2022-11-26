@@ -1,16 +1,32 @@
-.todo-item {
-        display: flex;
-        align-items: center;
-        text-align: center;
+.todo-lists {
+        list-style: none;
+        padding: 1rem .3rem;
 }
 
-.removeBtn {
-        border: 1px solid #ccc;
+.list-item {
         height: 1rem;
-        width: 1rem;
-        text-align: center;
-        border-radius: 30px;
+        width: 25rem;
         display: flex;
         align-items: center;
-        justify-content: center;
+        text-align: center;
+        justify-content: space-between;
+        border: 2px solid #ccc;
+        padding: 1rem 2rem;
+        background-color: #ccc;
+        border-radius: 9px;
+        margin-bottom: .5rem;
+        font-size: 1.2rem;
+}
+
+.list-item button {
+        padding: .2rem 1rem;
+        border-radius: 6px;
+        border: 2px solid #ccc;
+        cursor: pointer;
+}
+
+@media(max-width: 500px) {
+        .list-item {
+                width: 15rem;
+        }
 }
