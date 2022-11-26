@@ -7,16 +7,21 @@ const App = () => {
   const [todos, setTodos] = useState([]);
 
   const addTodos = enteredTodo => {
-    let newTodos = [...todos];
-    console.log(newTodos);
-    newTodos.push({ task: enteredTodo, id: Math.random().toString() });
-    setTodos(newTodos);
+    setTodos(prevTodos => {
+      const updatedTodos = [...prevTodos];
+      updatedTodos.push({
+        task: enteredTodo,
+        id: Math.random().toString(),
+      });
+      return updatedTodos;
+    });
   };
 
-  const deleteTodoItem = index => {
-    let newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos);
+  const deleteTodoItem = todoId => {
+    setTodos(prevTodos => {
+      const updatedTodos = prevTodos.filter(todo => todo.id !== todoId);
+      return updatedTodos;
+    });
   };
 
   return (
