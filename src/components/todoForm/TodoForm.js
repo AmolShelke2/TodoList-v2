@@ -10,6 +10,7 @@ export const TodoForm = props => {
   const enterdTodoChangeHandler = e => {
     setEnteredTodo(e.target.value);
     setErrorMessage('');
+    setIsErrorModelActive(false);
   };
 
   const addTodoHandler = e => {
