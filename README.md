@@ -18,6 +18,14 @@ Using the class components. In this Version I have added the functional componen
 
 ![todo-list-v2-nine vercel app_](https://user-images.githubusercontent.com/95171638/204099777-15bc39ca-6eaf-4c04-b8a4-f9b64f7fb072.png)
 
+## Features
+- Add todo-lists.
+- delete todo-lists.
+- Error modal if user enters a emtpy Todo-list.
+- Mobile Responsive.
+- Used useState for state updating.
+- Condtional component rendering
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
