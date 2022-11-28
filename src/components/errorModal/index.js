@@ -1,3 +1,3 @@
-import { ErrorModal } from './ErrorModal';
+import ErrorModal from './ErrorModal';
 
 export default ErrorModal;

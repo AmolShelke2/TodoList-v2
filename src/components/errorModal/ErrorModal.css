@@ -1,0 +1,52 @@
+.error-modal {
+        margin: 1rem;
+        background-color: #693d58;
+        height: 200px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        position: absolute;
+        top: 7rem;
+        box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        transition: opacity 1s ease-in;
+}
+
+.error-modal.active {
+        opacity: 1;
+}
+
+.error-modal p {
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        letter-spacing: .4px;
+        font-weight: bold;
+        color: #fff;
+}
+
+.close-error-modal {
+        background-repeat: no-repeat;
+        background-color: #12a4d1;
+        border: none;
+        padding: .8rem 2rem;
+        border-radius: 8px;
+        color: #fff;
+        font-weight: bold;
+        text-transform: capitalize;
+        cursor: pointer;
+}
+
+.close-error-modal:hover {
+        background-color: #12a4d9;
+        transform: scale(1);
+}
+
+@media(max-width: 500px) {
+        .error-modal {
+                left: 1rem;
+                width: 300px;
+        }
+}

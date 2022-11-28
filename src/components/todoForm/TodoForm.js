@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
+import ErrorModal from '../errorModal';
 
 import './TodoForm.css';
 
 export const TodoForm = props => {
   const [enteredTodo, setEnteredTodo] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
   const [isErrorModalActive, setIsErrorModelActive] = useState(false);
 
   const enterdTodoChangeHandler = e => {
     setEnteredTodo(e.target.value);
-    setErrorMessage('');
     setIsErrorModelActive(false);
   };
 
@@ -18,7 +17,6 @@ export const TodoForm = props => {
 
     if (enteredTodo.length === 0 || enteredTodo === '') {
       setIsErrorModelActive(true);
-      setErrorMessage('Add a valid todo');
       return;
     }
 
@@ -29,9 +27,8 @@ export const TodoForm = props => {
 
   return (
     <React.Fragment>
-      <p className={isErrorModalActive ? 'error active' : 'error'}>
-        {errorMessage}
-      </p>
+      {isErrorModalActive && <ErrorModal />}
+
       <div className="todo-form">
         <form onSubmit={addTodoHandler}>
           <label htmlFor="text">Enter Todo</label>

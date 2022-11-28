@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { ErrorModal } from './components/errorModal/ErrorModal';
 
 import TodoForm from './components/todoForm';
 import TodoLists from './components/todoLists/TodoLists';
@@ -27,7 +26,6 @@ const App = () => {
 
   return (
     <React.Fragment>
-      <ErrorModal />
       <TodoForm onAddTodo={addTodos} />
       <TodoLists items={todos} onDeleteTodoItem={deleteTodoItem} />
     </React.Fragment>
