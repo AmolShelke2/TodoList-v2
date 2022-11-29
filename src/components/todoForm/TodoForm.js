@@ -7,6 +7,8 @@ export const TodoForm = props => {
   const [enteredTodo, setEnteredTodo] = useState('');
   const [isErrorModalActive, setIsErrorModelActive] = useState(false);
 
+  const [error, setError] = useState();
+
   const enterdTodoChangeHandler = e => {
     setEnteredTodo(e.target.value);
     setIsErrorModelActive(false);
