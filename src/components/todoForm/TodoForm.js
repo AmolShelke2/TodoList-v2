@@ -5,20 +5,21 @@ import './TodoForm.css';
 
 export const TodoForm = props => {
   const [enteredTodo, setEnteredTodo] = useState('');
-  const [isErrorModalActive, setIsErrorModelActive] = useState(false);
 
   const [error, setError] = useState();
 
   const enterdTodoChangeHandler = e => {
     setEnteredTodo(e.target.value);
-    setIsErrorModelActive(false);
   };
 
   const addTodoHandler = e => {
     e.preventDefault();
 
     if (enteredTodo.length === 0 || enteredTodo === '') {
-      setIsErrorModelActive(true);
+      setError({
+        errorTitle: 'Error occured',
+        errorMessage: 'Please add a valid todo item',
+      });
       return;
     }
 
@@ -27,9 +28,19 @@ export const TodoForm = props => {
     setEnteredTodo('');
   };
 
+  const ErrorConfirmHandler = () => {
+    setError(null);
+  };
+
   return (
     <React.Fragment>
-      {isErrorModalActive && <ErrorModal />}
+      {error && (
+        <ErrorModal
+          title={error.errorTitle}
+          errorMessage={error.errorMessage}
+          onErrorConfirm={ErrorConfirmHandler}
+        />
+      )}
 
       <div className="todo-form">
         <form onSubmit={addTodoHandler}>

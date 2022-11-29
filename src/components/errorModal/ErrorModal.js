@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import './ErrorModal.css';
 
-const ErrorModal = () => {
-  const [errorModalActive, setErrorModalActive] = useState(true);
-
+const ErrorModal = props => {
   return (
-    <div className={errorModalActive ? 'error-modal active' : 'error-modal'}>
-      <p>Add a valid todo item</p>
-      <button
-        className="close-error-modal"
-        onClick={() => setErrorModalActive(false)}
-      >
-        try again
-      </button>
-    </div>
+    <React.Fragment>
+      <div className="overlay" onClick={props.onErrorConfirm} />
+      <div className="error-modal">
+        <h2>{props.title}</h2>
+        <p>{props.errorMessage}</p>
+        <button className="close-error-modal" onClick={props.onErrorConfirm}>
+          Try Again
+        </button>
+      </div>
+    </React.Fragment>
   );
 };
 
