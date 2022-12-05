@@ -9,15 +9,15 @@ Using the class components. In this Version I have added the functional componen
 - ReactJS
 - HTML
 - CSS
-
+<hr/>
 ## Live Preview
 
 [React-Todo-list-v2](https://todo-list-v2-nine.vercel.app/)
-
+<hr/>
 ## Preview
 
 ![todo-list-v2-nine vercel app_](https://user-images.githubusercontent.com/95171638/204099777-15bc39ca-6eaf-4c04-b8a4-f9b64f7fb072.png)
-
+<hr/>
 ## Features
 
 - Add todo-lists.
@@ -26,7 +26,7 @@ Using the class components. In this Version I have added the functional componen
 - Mobile Responsive.
 - Used useState for state updating.
 - Condtional component rendering
-
+<hr/>
 ## Topics that I used in this project
 
 - Use state hook for state updates
@@ -36,6 +36,7 @@ Using the class components. In this Version I have added the functional componen
 - conditional CSS styling
 - conditional component rendering
 
+<hr/>
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
